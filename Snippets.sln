@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.EF6OnCore", "src\Snippets.EF6OnCore\Snippets.EF6OnCore.csproj", "{62AE6D6A-7E06-4F76-AA7B-13E3757A9818}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62AE6D6A-7E06-4F76-AA7B-13E3757A9818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62AE6D6A-7E06-4F76-AA7B-13E3757A9818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62AE6D6A-7E06-4F76-AA7B-13E3757A9818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62AE6D6A-7E06-4F76-AA7B-13E3757A9818}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18333E6A-29C4-4C38-B86F-79F607F06F46}
+	EndGlobalSection
+EndGlobal
