@@ -3,7 +3,7 @@ using Castle.MicroKernel.Resolvers;
 using Castle.Windsor;
 using System;
 
-namespace Snippets.LazyInjectionOnCastle
+namespace LazyInjectionOnCastle
 {
     public static class Program
     {

@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Snippets.EF6OnCore
+namespace EF6OnCore
 {
     public static class Program
     {
@@ -16,6 +16,7 @@ namespace Snippets.EF6OnCore
                 .Build();
 
             using var context = new DataContext(configuration.GetConnectionString("DefaultConnection"));
+            context.Database.CreateIfNotExists();
 
             context.Entities.Add(new Entity { Value = "Some value" });
             context.Entities.Add(new Entity { Value = "Another value" });
