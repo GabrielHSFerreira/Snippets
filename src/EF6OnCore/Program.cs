@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Data.Entity;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace EF6OnCore
@@ -10,13 +9,9 @@ namespace EF6OnCore
     {
         public async static Task Main()
         {
-            var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
+            var configuration = ConfigurationProvider.Configuration;
 
             using var context = new DataContext(configuration.GetConnectionString("DefaultConnection"));
-            context.Database.CreateIfNotExists();
 
             context.Entities.Add(new Entity { Value = "Some value" });
             context.Entities.Add(new Entity { Value = "Another value" });
@@ -25,24 +20,6 @@ namespace EF6OnCore
             var entities = await context.Entities.ToListAsync();
             foreach (var entity in entities)
                 Console.WriteLine(entity);
-        }
-    }
-
-    public class DataContext : DbContext
-    {
-        public DbSet<Entity> Entities { get; set; }
-
-        public DataContext(string connectionString) : base(connectionString) { }
-    }
-
-    public class Entity
-    {
-        public int Id { get; set; }
-        public string Value { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Id} - {Value}";
         }
     }
 }
