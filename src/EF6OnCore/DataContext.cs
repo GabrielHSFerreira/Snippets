@@ -4,7 +4,7 @@ namespace EF6OnCore
 {
     public class DataContext : DbContext
     {
-        public DbSet<Entity> Entities { get; set; }
+        public DbSet<Entity> Entities => Set<Entity>();
 
         public DataContext(string connectionString) : base(connectionString)
         {
