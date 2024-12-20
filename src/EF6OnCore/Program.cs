@@ -11,7 +11,7 @@ namespace EF6OnCore
         {
             var configuration = ConfigurationProvider.Configuration;
 
-            using var context = new DataContext(configuration.GetConnectionString("DefaultConnection"));
+            using var context = new DataContext(configuration.GetConnectionString("DefaultConnection")!);
 
             context.Entities.Add(new Entity { Value = "Some value" });
             context.Entities.Add(new Entity { Value = "Another value" });
